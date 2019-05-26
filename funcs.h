@@ -16,5 +16,5 @@ double* sinList()	//can't use double[]...
 
 void modBinSearch(double* array)
 {	
-
+	std::cout << "Bitch plsss!!!"<<std::endl;
 }
