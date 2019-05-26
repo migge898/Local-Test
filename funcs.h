@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include <algorithm>
 #define PI 3.14159265358979323846
 
 double* sinList()	//can't use double[]...
@@ -14,7 +15,23 @@ double* sinList()	//can't use double[]...
 	return array;
 }
 
-void modBinSearch(double* array)
+double modBinSearch(double array[])
 {	
-	std::cout << "Bitch plsss!!!"<<std::endl;
+	const int len_array = 16;
+	int left = 0;                      
+	int right = len_array - 1;         
+
+	//kown Binary searcg
+	while (left <= right)
+	{
+		int mid = left + ((right - left) / 2); 
+
+		if (array[mid] == 0)       
+			return 0;
+		else
+			if (array[mid] > 0)
+				right = mid - 1;     
+			else 
+				left = mid + 1;      
+	}
 }
